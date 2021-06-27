@@ -17,8 +17,8 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           command: build
-          args: --release
+          args: --release --target
       - uses: actions/upload-artifact@v2
         with:
           name: rush_linux_amd64
-          path: target/release
+          path: target/release/deps/rush
